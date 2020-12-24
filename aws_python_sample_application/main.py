@@ -49,7 +49,7 @@ class SampleDemoApp:
         # Publisher
         task_publisher_thread = threading.Thread(target=self._publish_task, name="task_publisher_scheduler")
         task_publisher_thread.start()
-
+        time.sleep(300)
         # Listener
         task_processor_thread = threading.Thread(target=self._process_message(), name="task_processor_thread")
         task_processor_thread.start()
